@@ -9,7 +9,7 @@ function isStatus(value: unknown): value is RunStatus {
 }
 
 // Parse one log line; null means a bad line (not JSON, or JSON without the required fields).
-function parseLine(text: string): RunLine | null {
+export function parseLine(text: string): RunLine | null {
   let value: unknown;
   try {
     value = JSON.parse(text);
